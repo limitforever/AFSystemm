@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TestHighcharts</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+<servlet-name>OilTotalStatistic</servlet-name>
+<servlet-class>cauc.edu.cn.servlet.OilTotalStatistic</servlet-class>
+</servlet>
+ <servlet-mapping>
+<servlet-name>OilTotalStatistic</servlet-name>
+<url-pattern>/servlet/OilTotalStatistic</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+<servlet-name>OilTotalAirline</servlet-name>
+<servlet-class>cauc.edu.cn.servlet.OilTotalAirline</servlet-class>
+</servlet>
+ <servlet-mapping>
+<servlet-name>OilTotalAirline</servlet-name>
+<url-pattern>/servlet/OilTotalAirline</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+<servlet-name>OilBrandAirline</servlet-name>
+<servlet-class>cauc.edu.cn.servlet.OilBrandAirline</servlet-class>
+</servlet>
+ <servlet-mapping>
+<servlet-name>OilBrandAirline</servlet-name>
+<url-pattern>/servlet/OilBrandAirline</url-pattern>
+</servlet-mapping>
+
+</web-app>

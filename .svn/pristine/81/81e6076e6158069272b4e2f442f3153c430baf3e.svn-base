@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>中国航空油料有限责任公司 —— 飞机加油单</title>
+<style type="text/css">
+	td{
+		width: 300px;
+		height: 70px;
+	}
+</style>
+</head>
+<body>
+<div id="title" style="width: 100%;" align="center">
+	<h2> 中国航空油料有限责任公司 </h2>
+	<div style="margin-top: 10px;">China Aviation Oil Supply Limited Corporation</div>
+		<div style="margin-top: 10px;">飞机加油单</div>
+		<div style="margin-top: 10px;">REFUELING RECEIPT</div>
+</div>
+<img src="img/zhy.jpg" width="100px"; height="100px"; style="position:absolute; left:100px; top:100px; ">
+
+<div style="border: 1px solid #000000;width: 30%;margin-left: 35%;margin-top: 10px;">
+	<h1 style="color: #BB6028;" align="center">内航加油单</h1>
+</div>
+<div style="margin-left: 60%;margin-top: 5px;">
+	||||||||||||||||||||||||||||||||||||||||||<br>
+	||||||||||||||||||||||||||||||||||||||||||<br>
+	       1231321234654条码
+</div>
+<table id="tb" border="0" style="margin-left: 30px;margin-top: 30px;">
+	<tr>
+		<td>
+			飞机所属单位：<br>
+			Delivered to ______________________
+		</td>
+		<td>
+			飞机号码：<br>
+			Aircraft No.  ______________________
+		</td>
+		<td>
+			日期&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日<br>
+			Date_________Y_________M_________D
+		</td>
+	</tr>
+	<tr>
+		<td>
+			飞机类型：<br>
+			Aircraft Type __________________
+		</td>
+		<td>
+			航班号：<br>
+			Flight No.&nbsp;______________________
+		</td>
+		<td>
+			机场：<br>
+			AirPort     _______________________
+		</td>
+	</tr>
+	<tr>
+		<td>
+			航程：起始<br>
+			Departure ______________________
+		</td>
+		<td>
+			经停（备降）<br>
+			Transit stop  ______________________
+		</td>
+		<td>
+			终点：<br>
+			Destination  ______________________
+		</td>
+	</tr>
+</table>
+
+<table border="1" style="border-collapse:collapse;">
+	<tr>
+		<td rowspan="2"><p>油品名称和标准</p>
+	    <p>Description and grade</p></td>
+		<td rowspan="2"><p>温度（C）</p>
+	    <p>Tempreature</p></td>
+		<td colspan="3"> 实际加油数量Actual quantity</td>
+		
+	</tr>
+	<tr>
+		<td rowspan="2"><p>数量（升）</p>
+	    <p>Figures（L）</p></td>
+		<td rowspan="2"><p>数量大写（升）</p>
+        <p>Figures in words(Litres)</p></td>
+	</tr>
+	<tr>
+		<td> Jet  A-1</td>
+		<td rowspan="2"><p>实际密度（g/cm3)</p>
+		  <p>Actual density</p>
+	    <p>&nbsp;</p></td>
+		<td ><p>千克</p>
+	    <p> kilogram</p></td>
+	</tr>
+	<tr>
+		<td><p>3号喷气燃料</p>
+	    <p>No.3 Jet Fuel</p></td>
+		<td></td>
+		<td>     拾                   万             千               佰             十            升</td>
+		<td></td>
+	</tr>
+    <table id="tb" border="0" style="margin-left: 40px;margin-top: 30px;">
+    <tr>
+		<td> 
+        加油车车号<br>
+			Vehicle type and No.____________________________________________</td>
+		<td> </td>
+		<td>加油地井编号<br>
+        Hydrant pit No.______________________ </td>
+	</tr>
+    
+     <tr>
+		<td>加油开始时间<br>
+        Time start______________________ </td>
+		<td>加油结束时间<br>
+        Time finish______________________ </td>
+		<td> 发油人签字<br>
+        Deliverer Signature______________________</td>
+	</tr>
+    
+    </table>
+     <table id="tb" border="0" style="width: 100%;" align="center">
+     <tr>
+     <td>兹证明我负责本架飞机油料系统的操作及安全，并确定所加燃料的质量和数量是按照要求提供，航空器油箱盖，加油接口舱盖门与部件已盖好。This is to certify that I am responsible for the operation and safety of the aircaft fuel system,and I have verified the grade of fuel and quantity delivered are as requested,aircraft tank and fuelling nozzle connections have been covered properly.
+     </td>
+     </tr>
+     </table>
+     
+     <table id="tb" border="0" style="width: 100%;" align="right">
+     <tr>
+     <td></td>
+     <td></td>
+     <td> 收油人签字Recevier Signature______________________</td>
+     </tr>
+     </table>
+     
+     
+     <table id="tb" border="0"style="width: 100%;" align="center" >
+     <tr>
+     <td>
+       </td>
+       <td> <p>第一联：存根</p>
+       <p>Coupon 1:stub</p></td>
+       </tr>
+   
+     
+     
+     
+     </table>
+     
+     
+</table>
+</body>
+</html>

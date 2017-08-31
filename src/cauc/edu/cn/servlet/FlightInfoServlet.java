@@ -1,0 +1,74 @@
+package cauc.edu.cn.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.ParseException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+
+import cauc.edu.cn.model.PaginationInfo;
+import cauc.edu.cn.service.FlightInfoServices;
+
+
+/**
+ * Servlet implementation class FlightInfoQueryServlet
+ */
+@WebServlet("/FlightInfoServlet")
+public class FlightInfoServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		// TODO Auto-generated method stub
+		doPost(request, response);
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+	
+		//doGet(request, response);
+		//首先获取参数Map
+		Gson gson = new Gson();
+	
+		Map parameterMap = gson.fromJson(request.getParameter("query"), Map.class);
+		
+		String currentPageNumStr = request.getParameter("page");
+		Integer rows = Integer.parseInt(request.getParameter("rows"));
+		
+		int currentPageNum = 1;
+		if(currentPageNumStr!=null){
+			//第一次进入查询页面的情况
+			currentPageNum = Integer.parseInt(currentPageNumStr);
+		}
+		
+		PaginationInfo PaginationInfo = null;
+		try {
+			PaginationInfo = new FlightInfoServices().queryFlightByPagination(currentPageNum,rows,parameterMap);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		Map<String, Object> easyUIDataGrid = new HashMap<String, Object>();
+		easyUIDataGrid.put("total", PaginationInfo.getTotalCountNum());
+		easyUIDataGrid.put("rows", PaginationInfo.getBaseInfoList());
+		String json = gson.toJson(easyUIDataGrid);
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter writer = response.getWriter();
+		writer.print(json);		
+	
+	}//doPost()
+
+}
