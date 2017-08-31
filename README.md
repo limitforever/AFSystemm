@@ -1,2 +1,2 @@
 # AFSystemm
-This is a flight refueling management system.
+Please change to branch dev to obtain my resources.
